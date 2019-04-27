@@ -12,22 +12,22 @@ public class SimpleFragment extends Fragment {
     protected Context context = getContext();
 
     protected int getInteger(int resId) {
-        return context.getResources().getInteger(resId);
+        return getContext().getResources().getInteger(resId);
     }
 
     protected boolean getBoolean(int resId) {
-        return context.getResources().getBoolean(resId);
+        return getContext().getResources().getBoolean(resId);
     }
 
     protected int getOrientation() {
-        return context.getResources().getConfiguration().orientation;
+        return getContext().getResources().getConfiguration().orientation;
     }
 
-    public void setTitle(int id) {
+    protected void setTitle(int id) {
         getActivity().setTitle(id);
     }
 
-    public void setTitle(String title) {
+    protected void setTitle(String title) {
         getActivity().setTitle(title);
     }
 
@@ -47,7 +47,7 @@ public class SimpleFragment extends Fragment {
         getActivity().startActivityForResult(intent, requestCode, options);
     }
 
-    public void invalidateOptionsMenu() {
+    protected void invalidateOptionsMenu() {
         getActivity().invalidateOptionsMenu();
     }
 }
