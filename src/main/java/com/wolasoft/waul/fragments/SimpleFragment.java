@@ -11,6 +11,18 @@ public class SimpleFragment extends Fragment {
 
     protected Context context = getContext();
 
+    protected int getInteger(int resId) {
+        return context.getResources().getInteger(resId);
+    }
+
+    protected boolean getBoolean(int resId) {
+        return context.getResources().getBoolean(resId);
+    }
+
+    protected int getOrientation() {
+        return context.getResources().getConfiguration().orientation;
+    }
+
     public void setTitle(int id) {
         getActivity().setTitle(id);
     }
