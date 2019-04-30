@@ -26,6 +26,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    // gson
+    implementation 'com.google.code.gson:gson:2.8.5'
     // picasso
     implementation "com.squareup.picasso:picasso:${rootProject.ext.picassoVersion}"
     // apache commons
