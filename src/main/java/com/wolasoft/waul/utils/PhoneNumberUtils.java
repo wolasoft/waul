@@ -5,7 +5,7 @@ import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
 
 public class PhoneNumberUtils {
-    private static final String DIALLING_CODE_TOGO =  "TG";
+    public static final String DIALLING_CODE_TOGO =  "TG";
     private static PhoneNumberUtil phoneNumberUtil = PhoneNumberUtil.getInstance();
 
     public static boolean isValidNumber(String phoneNumber) {
