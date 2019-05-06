@@ -33,22 +33,6 @@ public class SimpleFragment extends Fragment {
         getActivity().setTitle(title);
     }
 
-    public void startActivity(Intent intent) {
-        getActivity().startActivity(intent);
-    }
-
-    public void startActivity(Intent intent, Bundle options) {
-        getActivity().startActivity(intent, options);
-    }
-
-    public void startActivityForResult(Intent intent, int requestCode) {
-        getActivity().startActivityForResult(intent, requestCode);
-    }
-
-    public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
-        getActivity().startActivityForResult(intent, requestCode, options);
-    }
-
     protected void invalidateOptionsMenu() {
         getActivity().invalidateOptionsMenu();
     }
