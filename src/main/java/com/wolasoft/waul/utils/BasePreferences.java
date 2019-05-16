@@ -18,6 +18,7 @@ public class BasePreferences {
         this.gson = new Gson();
         this.preferences = context.getApplicationContext().getSharedPreferences(
                 prefsName, Context.MODE_PRIVATE);
+        editor = preferences.edit();
     }
 
     /**
@@ -28,7 +29,6 @@ public class BasePreferences {
      */
     public <T> void saveObject(String key, T data) {
         String jsonData = this.gson.toJson(data);
-        editor = preferences.edit();
         editor.putString(Encryption.toBase64(key), Encryption.toBase64(jsonData));
         editor.apply();
     }
@@ -42,7 +42,6 @@ public class BasePreferences {
      */
     public <T> void saveObject(String key, T data, Type type) {
         String jsonData = this.gson.toJson(data, type);
-        editor = preferences.edit();
         try {
             String encryptedKey = AESEncryption.encrypt(key);
             String encryptedData = AESEncryption.encrypt(jsonData);
@@ -76,5 +75,16 @@ public class BasePreferences {
         }
 
         return decodedObject != null ? decodedObject : defaultValue;
+    }
+
+    public void remove(String key) {
+        try {
+            String encryptedKey = AESEncryption.encrypt(key);
+            editor.remove(encryptedKey);
+            editor.commit();
+            editor.apply();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
