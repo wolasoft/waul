@@ -14,12 +14,12 @@ public class ImageBindingAdapter {
         if (imageUrl != null && !imageUrl.equals("")) {
             Picasso.get()
                     .load(imageUrl)
-                    .error(R.drawable.ic_photo_size_select_actual_black_24dp)
-                    .placeholder(R.drawable.ic_photo_size_select_actual_black_24dp)
+                    .error(R.drawable.no_image)
+                    .placeholder(R.drawable.no_image)
                     .into(view);
         } else {
             view.setImageDrawable(
-                    view.getContext().getResources().getDrawable(R.drawable.ic_photo_size_select_actual_black_24dp));
+                    view.getContext().getResources().getDrawable(R.drawable.no_image));
         }
     }
 }
