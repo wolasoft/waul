@@ -7,6 +7,7 @@ import com.wolasoft.waul.R;
 
 import org.apache.commons.lang3.time.DateFormatUtils;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -43,5 +44,29 @@ public class DateUtilities {
         }
 
         return formattedDate;
+    }
+
+    public static String getDay(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        return String.valueOf(day);
+    }
+
+    public static String getMonth(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        String month = new SimpleDateFormat("MMM").format(calendar.getTime());
+
+        return month;
+    }
+
+    public static String getYear(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int year = calendar.get(Calendar.YEAR);
+
+        return String.valueOf(year);
     }
 }
