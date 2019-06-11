@@ -13,6 +13,10 @@ import java.util.Date;
 
 public class DateUtilities {
     public static String format(Date incomingDate, Context context) {
+        if (incomingDate == null) {
+            return "";
+        }
+
         final String FORMAT_SIMPLE_DAY = context.getString(R.string.date_format_simple_day);
         final String FORMAT_TODAY = context.getString(R.string.date_format_today);
         final String FORMAT_YEAR_DAY = context.getString(R.string.date_format_year_day);
