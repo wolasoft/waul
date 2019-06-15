@@ -5,4 +5,5 @@
     <string name="date_format_today">\'Today\' \'at\' hh:mm</string>
     <string name="date_format_year_day">EEEE d MMM \'at\' hh:mm</string>
     <string name="date_format_yesterday">\'Yesterday\' \'at\' hh:mm</string>
+    <string name="date_format_simple_date">EEEE d MMM</string>
 </resources>

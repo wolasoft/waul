@@ -50,6 +50,34 @@ public class DateUtilities {
         return formattedDate;
     }
 
+    public static String getDate(Date incomingDate, Context context) {
+        final String FORMAT_SIMPLE_DATE = context.getString(R.string.date_format_simple_date);
+
+        String formattedDate;
+
+        try {
+            formattedDate = DateFormatUtils.format(incomingDate, FORMAT_SIMPLE_DATE);
+        } catch (Exception e) {
+            formattedDate = "";
+        }
+
+        return formattedDate;
+    }
+
+    public static String getTime(Date incomingDate, Context context) {
+        final String FORMAT_SIMPLE_TIME = context.getString(R.string.date_format_simple_time);
+
+        String formattedDate;
+
+        try {
+            formattedDate = DateFormatUtils.format(incomingDate, FORMAT_SIMPLE_TIME);
+        } catch (Exception e) {
+            formattedDate = "";
+        }
+
+        return formattedDate;
+    }
+
     public static String getDay(Date date) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
