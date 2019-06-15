@@ -6,6 +6,8 @@
     <string name="date_format_today">\'Ajourd\'\'hui\' \'à\' hh:mm</string>
     <string name="date_format_year_day">EEEE d MMM \'à\' hh:mm</string>
     <string name="date_format_yesterday">\'Hier\' \'à\' hh:mm</string>
+    <string name="date_format_simple_date">EEEE d MMM</string>
+    <string name="date_format_simple_time" translatable="false">hh:mm</string>
 
     <!-- currencies -->
     <string name="currency_cfa" translatable="false">F CFA</string>
